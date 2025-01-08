@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vn" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="ad_fragments/header::header"></head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <header class="main-header" th:replace="ad_fragments/main-header::main-header"></header>
+  <!-- =============================================== -->
+  <!-- Left side column. contains the sidebar -->
+  <aside class="main-sidebar" th:replace="ad_fragments/main-sidebar::main-sidebar"></aside>
+  <!-- =============================================== -->
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Quản lý Danh mục sản phẩm
+      
+      </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <!-- Default box -->
+      <div class="col-md-8">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Cập nhật danh mục</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" method="post" th:action="@{/admin/category/edit}" th:object="${category}">
+              <input type="hidden" class="form-control" id="exampleInputEmail1" th:field="*{id}"></input>
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Tên danh mục</label>
+                  <input type="text" class="form-control" id="Tên" placeholder="Name"
+                  th:field="*{categoryName}">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Số Lượng</label>
+                  <input type="number"  class="form-control" id="số lượng" placeholder="Số lượng" required="required"
+                  th:field="*{categoryQuantity}">
+                </input>
+              </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-success">Sửa</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+      <!-- /.box -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<div th:replace="ad_fragments/jspluggin::jspluggin"></div>
+</body>
+</html>

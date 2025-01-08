@@ -1,0 +1,25 @@
+*Entity: ánh xạ vào csdl
+*Controller: xử lý các yêu cầu từ người dùng, gọi các phương thức của Service để lấy
+             dữ liệu, và trả về cho người dùng.
+*Repository: truy xuất dữ liệu từ cơ sở dữ liệu
+*Servie: xử lý các yêu cầu từ controller, kết nối với tầng Repository để lấy dữ liệu, 
+         xử lý, và trả về cho controller để gửi lại cho người dùng.
+
+---------------------------------Security--------------------------------
+Cung cấp dịch vụ xác thực người dùng thông qua CustomUserDetailsService.
+Mã hóa mật khẩu người dùng.
+Cấu hình quyền truy cập cho các URL.
+Đặt trang đăng nhập và chuyển hướng sau khi đăng nhập thành công.
+
+
+---------------------------------Login------------------------------------
+*Model: là một đối tượng của Spring Framework được sử dụng để truyền dữ liệu
+        từ controller sang view (HTML template).
+*Principal: là một interface trong Java, thường được Spring Security
+            sử dụng để đại diện cho người dùng đã xác thực.
+
+*Lưu thông tin người dùng sau khi đăng nhập thành công: 
+   Spring Security sẽ tự động lưu thông tin người dùng 
+   sau khi đăng nhập thành công vào SecurityContext.
+   Bạn có thể sử dụng thông tin này để hiển thị tên người dùng trong giao diện.
+*Hiển thị tên người dùng trong giao diện: sử dụng Thymeleaf để hiển thị tên người dùng

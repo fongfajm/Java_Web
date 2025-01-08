@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vn" xmlns:th="http://www.thymeleaf.org">
+
+
+<head th:replace="fragments/head::head">  </head>
+<body>
+    <!-- Header Section  -->
+    <div th:replace="fragments/header::header"></div>
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" th:data-setbg="@{/users/img/breadcrumb.jpg}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Vegetable’s Package</h2>
+                        <div class="breadcrumb__option">
+                            <a th:href="@{/home}">Home</a>
+                            <a th:href="@{/home}">Vegetables</a>
+                            <span>Vegetable’s Package</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large"
+                                th:src="@{/users/img/product/details/product-details-1.jpg}" alt="">
+                        </div>
+                        <div class="product__details__pic__slider owl-carousel">
+                            <img th:data-imgbigurl="@{/users/img/product/details/product-details-2.jpg}"
+                                th:src="@{/users/img/product/details/thumb-1.jpg}" alt="">
+                            <img th:data-imgbigurl="@{/users/img/product/details/product-details-3.jpg}"
+                                th:src="@{/users/img/product/details/thumb-2.jpg}" alt="">
+                            <img th:data-imgbigurl="@{/users/img/product/details/product-details-5.jpg}"
+                                th:src="@{/users/img/product/details/thumb-3.jpg}" alt="">
+                            <img th:data-imgbigurl="@{/users/img/product/details/product-details-4.jpg}"
+                                th:src="@{/users/img/product/details/thumb-4.jpg}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product__details__text">
+                        <h3>Vetgetable’s Package</h3>
+                        <div class="product__details__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span>(18 reviews)</span>
+                        </div>
+                        <div class="product__details__price">$50.00</div>
+                        <p> Một thế giới thu nhỏ của rau củ tươi ngon đang hiện ra. 
+                            Những quả cà chua đỏ mọng căng tròn như những viên bi thủy tinh, lấp ló bên cạnh những cây cải xanh mướt mát, lá xếp chồng lên nhau như những chiếc thuyền nhỏ. 
+                            Xen kẽ đó là những củ cà rốt cam tươi, hình dáng thon dài, và những quả ớt đỏ chói chang, trông như những chiếc đèn lồng tí hon. 
+                            Thật không thể cưỡng lại được mùi thơm dịu nhẹ của rau củ tươi, hòa quyện với nhau tạo nên một hương vị thật hấp dẫn.</p>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="primary-btn">ADD TO CARD</a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <ul>
+                            <li><b>Availability</b> <span>In Stock</span></li>
+                            <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
+                            <li><b>Weight</b> <span>0.5 kg</span></li>
+                            <li><b>Share on</b>
+                                <div class="share">
+                                    <a href="https://www.facebook.com/profile.php?id=100043271031151" target"_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="product__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                    aria-selected="true">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                                    aria-selected="false">Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                                    aria-selected="false">Reviews <span>(1)</span></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Products Infomation</h6>
+                                    <p>- Rau củ là nguồn cung cấp dồi dào vitamin, khoáng chất thiết yếu cho cơ thể. 
+                                    Chúng giúp tăng cường hệ miễn dịch, bảo vệ tim mạch, ngăn ngừa nhiều loại bệnh tật, và làm đẹp da.
+                                    - Chất xơ có trong rau củ giúp hệ tiêu hóa hoạt động tốt, ngăn ngừa táo bón và các vấn đề về đường ruột.
+                                    Ngoài ra, chất xơ còn giúp kiểm soát cân nặng và giảm nguy cơ mắc bệnh tiểu đường
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Products Infomation</h6>
+                                    <p>Rau củ là những món quà quý giá mà thiên nhiên ban tặng cho con người.
+                                        Chúng được trồng trên khắp thế giới, từ những vùng đất màu mỡ cho đến những vùng cao nguyên khắc nghiệt,
+                                        tạo nên một sự đa dạng về chủng loại và hương vị.
+                                    </p>
+                                    <p>Mỗi vùng miền trên thế giới đều có những loại rau củ đặc sản riêng.
+                                    Ví dụ, Việt Nam nổi tiếng với các loại rau thơm, rau sống,
+                                    còn châu Âu lại nổi tiếng với các loại củ cải, cà rốt.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Products Infomation</h6>
+                                    <p>Cà chua không chỉ là một loại gia vị quen thuộc trong các món ăn mà còn là một nguồn cung cấp vitamin C dồi dào. 
+                                        Cà chua có thể được chế biến thành nhiều món ăn khác nhau như salad, sốt cà chua, nước ép.
+                                        Ngoài ra, cà chua còn có tác dụng chống oxy hóa, giúp bảo vệ da và ngăn ngừa ung thư.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Details Section End -->
+
+    <!-- Related Product Section Begin -->
+    <section class="related-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2>Related Product</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" th:data-setbg="@{/users/img/product/product-1.jpg}">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a th:href="@{/Product}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#"></a></h6>
+                            <h5>50.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" th:data-setbg="@{/users/img/product/product-2.jpg}">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a th:href="@{/Product}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#"></a></h6>
+                            <h5>50.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" th:data-setbg="@{/users/img/product/product-3.jpg}">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a th:href="@{/Product}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#"></a></h6>
+                            <h5>50.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" th:data-setbg="@{/users/img/product/product-7.jpg}">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a th:href="@{/Product}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#"></a></h6>
+                            <h5>50.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Related Product Section End -->
+    <!-- Footer Section Begin -->
+    <div th:replace="fragments/footer::footer"></div>
+    <!-- Js Plugins -->
+    <div th:replace="fragments/JsPlugins::JsPlugins"></div>
+</body>
+
+</html>
